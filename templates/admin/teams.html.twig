@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teams · JobBoard{% endblock %}
+
+{% block body %}
+    <h1>Teams</h1>
+    <p><a href="{{ path('admin_dashboard') }}">Back to dashboard</a></p>
+
+    <section class="cards">
+        {% for team in teams %}
+            <article>
+                <h2>{{ team.name }}</h2>
+                {% if team.city %}
+                    <p>{{ team.city }}</p>
+                {% endif %}
+                {% if team.description %}
+                    <p>{{ team.description }}</p>
+                {% endif %}
+            </article>
+        {% else %}
+            <p>No teams found.</p>
+        {% endfor %}
+    </section>
+{% endblock %}

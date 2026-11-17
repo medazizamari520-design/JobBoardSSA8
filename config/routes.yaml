@@ -1,0 +1,15 @@
+swagger_ui:
+  path: /swagger-ui.html
+  methods: [GET]
+  defaults:
+    _controller: nelmio_api_doc.controller.swagger_ui
+
+openapi_json:
+  path: /api/doc.json
+  methods: [GET]
+  defaults:
+    _controller: nelmio_api_doc.controller.swagger
+
+controllers:
+  resource: ../src/Controller/
+  type: attribute

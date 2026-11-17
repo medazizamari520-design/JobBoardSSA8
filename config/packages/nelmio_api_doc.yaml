@@ -1,0 +1,12 @@
+nelmio_api_doc:
+  html_config:
+    assets_mode: bundle
+  documentation:
+    info:
+      title: JobBoard API
+      description: Documentation de l'API JobBoard
+      version: 1.0.0
+  areas:
+    default:
+      path_patterns:
+        - ^/api(?!/doc\.json$)
